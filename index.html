@@ -7,24 +7,26 @@
     <title>Rock-paper-scissors</title>
 </head>
 <body>
-    <script>
+    <script>    
         function computerPlay () {
             let array = ['Rock', 'Paper', 'Scissors'];
 
             let random = Math.floor(Math.random() * array.length);
             return (random, array[random]);
         }
-        // function game () {
-        //     function playRound (playerSelection, computerSelection) {
-        //         let strWin = "You Lose! Paper beats Rock";
-        //         strWin.toLowerCase();
-        //         return strWin
-        //     }
-        //     const playerSelection = "rock";
-        //     const computerSelection = computerPlay();
-        //     console.log(playRound(playerSelection, computerSelection));
-        // }
-        // console.log(game())
+        function game () {
+            let playerSelection = prompt("What is your choice?", " ");
+            let computerSelection = computerPlay();
+            
+            function playRound (playerSelection, computerSelection) {
+
+                let lowerStr = playerSelection.toLowerCase();
+                return lowerStr;
+                
+            }
+            return playRound(playerSelection, computerSelection);
+        }
+        console.log(game())
         console.log(computerPlay());
     </script>
 </body>
